@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>picture upload</title>
+    <link rel="stylesheet" href="./css/index.css" />
+    <script defer src="./js/index.js"></script>
+    <script defer src="./js/untils.js"></script>
+  </head>
+  <body>
+    <div id="main">
+      <div id="picture-container">
+        <div class="picture-upload">
+          <input type="file" id="input-file" accept="image/*" />
+          <div class="tip">请点击或拖拽文件进行上传</div>
+          <img class="preview-img" />
+          <div class="text-preview">
+            <button type="button" id="text-preview-btn-close">关闭</button>
+            <div class="content"></div>
+          </div>
+        </div>
+        <div class="address">当前图片地址：<a href="" target="_blank"></a></div>
+        <div class="btn-area">
+          <button
+            class="button"
+            type="button"
+            id="btn-1"
+            title="预览并复制当前图片地址到剪贴板"
+          >
+            按钮一
+          </button>
+          <button class="button" type="button" id="btn-2" title="下载当前图片">
+            按钮二
+          </button>
+          <button class="button" type="button" id="btn-3">按钮三</button>
+          <div class="button" id="btn-4" hidden>
+            <input type="file" id="picture-restore" accept="image/*" />
+            <span>还原图片</span>
+          </div>
+          <div class="sign">何富康</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
