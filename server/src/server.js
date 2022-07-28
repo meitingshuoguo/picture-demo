@@ -3,7 +3,6 @@ const path = require("path");
 const multer = require("multer");
 const app = new express();
 const crypto = require("crypto");
-const concat = require("concat-stream");
 const fs = require("fs");
 
 const port = 3000;
@@ -92,5 +91,10 @@ app.post("/upload", upload.single("file"), (req, res) => {
 });
 
 app.listen(port, () => {
+  fs.mkdir("./public/static/img", { recursive: true }, (err, path) => {
+    if (err) {
+      throw err;
+    }
+  });
   console.log("service start：http://localhost:" + port);
 });
